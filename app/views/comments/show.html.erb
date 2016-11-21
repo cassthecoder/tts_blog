@@ -1,0 +1,12 @@
+
+<% @blog_post.comments.each do |comment| %>
+	<div class="panel-body">
+		<p><%= link_to comment.user.username, user_posts_path(id: blog_post.user.id) %></p>
+		<p><%= comment.comment_entry %></p>
+		<p><span class="posted-at"><%= comment.created_at.strftime('%m/%d/%Y %H:%M:%S')%></span></p>
+	</div>
+<% end %>	
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

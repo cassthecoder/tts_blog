@@ -1,0 +1,24 @@
+<h1>Hey, <%= current_user.username %>, these are your posts...</h1>
+
+<% current_user.blog_posts.each do |blog_post| %>
+<div class="col-md-12">
+ <div class="panel panel-success">
+  <div class="panel-heading text-center">
+   <%= link_to blog_post.title, blog_post %>
+       </div>
+       <div class="panel-body">
+        <p><span class="posted-at"><%= blog_post.created_at.strftime('%m/%d/%Y at %l:%M%p') %></span></p>
+        <p><%= blog_post.blog_entry[0..150] %>... {<%= link_to "READ MORE", blog_post %>]</p>
+      </div>
+      <div class="panel-footer">
+       
+       <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %> 
+       
+       <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </div>
+  </div>
+</div>
+<% end %> 
+
+<br>
+<%= link_to 'New Blog Post', new_blog_post_path %>

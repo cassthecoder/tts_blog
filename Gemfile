@@ -1,10 +1,25 @@
 source 'https://rubygems.org'
 
 
+#for our local server:
+group :development do
+    gem 'sqlite3'
+end
+
+#for Heroku:
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+gem 'devise'
+gem 'stamp'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.19.0'
+# gem 'pg', '~> 0.19.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

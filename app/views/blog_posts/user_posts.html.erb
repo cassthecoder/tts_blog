@@ -1,0 +1,35 @@
+<h1><%= @user.username %>'s Page</h1>
+<div class="">
+    <p><strong>Name:</strong><%= @user.name %></p>
+    <p><strong>Location:</strong><%= @user.location %></p>
+    <p><strong>Birthday:</strong><%= @user.birthday.strftime("%m/%d/%Y") %></p>
+</div>
+
+<div>
+    <% @user.blog_posts.each do |blog_post| %>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <%= link_to blog_post do %>
+                        <h3 class="panel-title">
+                            <%= blog_post.title %>
+                        </h3>
+                    <% end %>
+                </div>
+
+
+                <div class="panel-body">
+                    <p><%= blog_post.user.username %></p>
+                    <p><%= blog_post.blog_entry[0..250] %>[<%= link_to "READ MORE", blog_post %>]</p>
+                </div>
+
+                <% if current_user.id == blog_post.user.id %>
+                <div class="panel-footer">
+                    <%= link_to 'Edit', edit_blog_post_path(blog_post), class: 'btn btn-sm btn-warning' %>
+                    <%= link_to 'Destroy', blog_post, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-sm btn-danger' %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>

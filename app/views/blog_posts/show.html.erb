@@ -1,0 +1,40 @@
+
+<div class="panel panel-primary">
+	<div class="panel-heading text-center">
+		<%= @blog_post.title %>
+	</div>
+	<div class="panel-body">
+  		<p>by <strong><%= link_to @blog_post.user.username, user_posts_path(id: @blog_post.user.id) %></strong> 
+		<span class="posted-at"> posted at: <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span><br/>
+		<p><%= @blog_post.blog_entry%></p>
+	</div>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		Make a Comment
+	</div>
+	<div class="panel-body">
+		<%= render 'comments/form' %>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-header">
+		<h4>Comments</h4>
+	</div>
+	<% @blog_post.comments.each do |comment| %>
+	  <div class="panel panel-success">
+	    <div class="panel-body">
+      	<p><strong><%= comment.user.username %></strong> said:</p>
+				<p><%= comment.comment_entry%></p>
+			</div>
+			</div>
+	<% end %>
+
+
+<div>
+	<%= link_to 'Edit', edit_blog_post_path(@blog_post)%> |
+	<%= link_to 'Back', blog_posts_path %>
+</div>
+

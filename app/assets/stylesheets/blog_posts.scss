@@ -1,0 +1,204 @@
+// Place all the styles related to the BlogPosts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+.cant-see-me {
+	display:none;
+}
+
+h1{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #FB788E;
+	text-shadow: 3px 1px 4px rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+	font-family: 'Righteous', cursive;
+}
+
+h2{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #FB788E;
+	text-shadow: 3px 1px 4px rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+	font-family: 'Righteous', cursive;
+}
+
+h3{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #FB788E;
+	text-shadow: 3px 1px 4px rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+	font-family: 'Righteous', cursive;
+}
+
+label{
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+i{
+	font-family: 'Lato', sans-serif;
+}
+
+p{
+	margin:10px;
+	font-family: 'Lato', sans-serif;
+	color:white;
+}
+
+a{
+	font-family: 'Lato', sans-serif;
+    color: #FB788E;
+    text-decoration: none;
+}
+
+body > a {
+	font-size: 1.5em;
+	font-weight: 700;
+	color:white;
+}
+
+.alert-success {
+    background-color: #00ADAE;
+    border-color: #00ADAE;
+	color: white;
+}
+
+.alert-success > h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color:white;
+	text-transform: none;
+	vertical-align: center;
+}
+
+.panel-heading > a{
+	font-family: 'Righteous', cursive;
+	font-size:2em;
+	text-transform: uppercase;
+    color: #00ADAE;
+    text-shadow: 3px 1px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #000000;
+}
+
+.panel-body{
+	color:#00ADAE;
+	background-color: rgba(0,0,0,.7);
+	height:100%;
+}
+
+.btn {
+	border-color: transparent;
+	font-family: 'Lato', sans-serif;
+}
+
+.btn .btn-primary{
+	background-color: #1FC6D9;
+	border-color: #1FC6D9;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #FB788E;
+    border-color: transparent;
+}
+
+.btn-danger{
+	background-color: #00ADAE;
+}
+
+.btn .btn-danger{
+	background-color: #1FC6D9;
+	border-color: #1FC6D9;
+}
+
+.btn .btn-success{
+	background-color: #1FC6D9;
+	border-color: #1FC6D9;
+}
+
+body{
+	margin: 70px;
+	background: url("books.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.panel{
+	border-color: black;
+	background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+	color: white;
+    background-color: rgba(255,255,255,.3);
+    border-color: black;
+}
+
+.panel > .panel-success > .panel-heading{
+	color: white;
+	background-color: rgba(255,255,255,.3);
+    border-color: black;
+}
+
+.panel-success > .panel-heading{
+	color: white;
+	background-color: rgba(255,255,255,.3);
+    border-color: black;
+}
+
+.panel-default > .panel-footer {
+	color: black;
+    background-color: rgba(0,0,0,.5);
+    border-color: black;
+}
+
+.panel-success > .panel-footer{
+	color: black;
+	background-color: rgba(0,0,0,.5);
+    border-color: black;
+}
+
+#navbar .btn{
+	background-color: transparent;
+
+}
+
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar{
+	font-family: 'Lato', sans-serif;
+	font-size:1.5em;
+	color:white;
+	letter-spacing: .5px;
+}
+
+.navbar-brand {
+	font-family: 'Righteous', cursive;
+	color: white;
+	font-size: 2em;
+	letter-spacing: 2px;
+}
