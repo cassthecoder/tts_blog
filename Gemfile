@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
+
 
 #for our local server:
 group :development do
